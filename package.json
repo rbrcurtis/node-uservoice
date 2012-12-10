@@ -1,17 +1,13 @@
 {
-  "name": "multipass",
-  "description": "Encode and decode Tender Multipass tokens",
-  "version": "1.0.2",
-  "author": "David Wood <bitprobe@gmail.com>",
+  "name": "uservoice",
+  "description": "Encode and decode UserVOice Multipass tokens",
+  "version": "0.0.1",
+  "author": "Ryan Curtis <wednesday@gmail.com>",
   "repository": {
       "type": "git",
-      "url": "http://github.com/davidwood/node-multipass" 
+      "url": "https://github.com/rbrcurtis/node-uservoice" 
   },
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
-  },
-  "keywords": ["sso", "tender", "multipass"],
-  "main": "./lib/multipass",
+  "keywords": ["uservoice"],
+  "main": "./lib/uservoice",
   "engines": { "node": ">= 0.4.0" }
 }
