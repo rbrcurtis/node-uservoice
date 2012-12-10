@@ -1,6 +1,6 @@
 {
   "name": "uservoice",
-  "description": "Encode and decode UserVOice Multipass tokens",
+  "description": "Encode and decode UserVoice Multipass tokens",
   "version": "0.0.1",
   "author": "Ryan Curtis <wednesday@gmail.com>",
   "repository": {
