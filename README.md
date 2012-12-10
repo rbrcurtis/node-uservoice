@@ -1,29 +1,27 @@
 # Encode and decode Tender Multipass tokens
 
-[Tender](http://tenderapp.com) provides a mechanism for single sign-on known as Multipass.  Multipass uses an AES encrypted JSON hash and node-multipass provides functions for encoding and decoding these tokens.
-
-More details on Multipass can be found [here](https://help.tenderapp.com/kb/setup-installation/share-your-own-sites-authentication-with-tender).
+This project is based on a fork of the Tender node multipass implementation by David Wood, which can be found at https://github.com/davidwood/node-multipass.  UserVoice uses a multipass implementation that is very similar to Tender (and likely one is based on the other) except that the encryption algorithm is slightly different.
 
 ## Installation
 <pre>
-    npm install multipass
+    npm install uservoice
 </pre>
 
 ## Usage
 
-Multipass is constructed with two arguments: an API key and a site key.  These keys can be found within the Tender admin (Accounts & Settings > Extras > Single Sign-On).
+UserVoice multipass is constructed with two arguments: an API key and a site key.  These keys can be found within the Tender admin (Accounts & Settings > Extras > Single Sign-On).
 
 ``` js
-  var Multipass = require('multipass');
+  var Multipass = require('uservoice');
 
   // Construct the Multipass encoder / decoder
-  var multipass = new Multipass('API-KEY', 'SITE-KEY');
+  var uservoice = new Multipass('API-KEY', 'SITE-KEY');
 
   // Encode a Multipass token
-  var token = multipass.encode({ email: 'test@example.com', name: 'test', expires: '2011-07-06 23:28:40Z' });
+  var token = uservoice.encode({ email: 'test@example.com', display_name: 'test', guid: 'abc123' });
 
   // Decode a Multipass token
-  var obj = multipass.decode(token);
+  var obj = uservoice.decode(token);
 ```
 
 ### encode(obj)
